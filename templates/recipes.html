@@ -1,31 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {{ recipes }}
-
     <h2>{{ page_title }}</h2>
 
-    <hr>
+    {% for recipe in recipes %}
 
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Sweet Chilli Shrimp & Cabbage Stir-Fry</h3>
-            <p>
-                Falling into a stir-fry rut with the same veggie + sauce combo each week? We’ve got you covered. This
-                version features garlicky ground pork, which is simmered in a sweet, savory, and spicy blend of soy
-                glaze, ponzu, Thai chili sauce, and rice wine vinegar. It’s tossed with tender sautéed cabbage, then
-                spooned over jasmine rice and garnished with crispy fried onions and fresh cilantro. The best part? It’s
-                ready in just 20 minutes—now that’s what we call a winning dinner.<br>
-
-                Cooking Time: 20 minutes + 5 minutes prep | Cooking Difficulty: Easy<br>
-
-                Allergens:Soy, Wheat, Fish, Shellfish, Milk<br>
-                Produced in a facility that processes milk, eggs, fish, shellfish, tree nuts, peanuts, wheat, and
-                soybean.
-            </p>
+        <div class="row featurette">
+            <div class="col-md-8">
+                <h3><a href="/recipe/{{ recipe.url }}">{{ recipe.name }}</a></h3>
+                <p>{{ recipe.directions }}</p>
+            </div>
+            <div class="col-md-4">
+                <img src="{{ recipe.img_source }}" alt="" class="featurette-image image-responsive">
+            </div>
         </div>
-        <div class="col-md-5">
-            <img src="https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_auto,w_2600/hellofresh_s3/image/61fad303da825628d20377bf-59e80dd6.jpg" alt="">
-        </div>
-    </div>
+
+        <hr class="featurette-divider">
+
+    {% endfor %}
+
+
 {% endblock %}
