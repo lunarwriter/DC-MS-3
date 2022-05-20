@@ -1,6 +1,9 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Recipes Page</h2>
+
+    {{ recipes }}
+
+    <h2>{{ page_title }}</h2>
 
     <hr>
 
@@ -23,29 +26,6 @@
         </div>
         <div class="col-md-5">
             <img src="https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_auto,w_2600/hellofresh_s3/image/61fad303da825628d20377bf-59e80dd6.jpg" alt="">
-        </div>
-    </div>
-
-    <hr>
-
-    <div class="row featurette">
-        <div class="col-md-7">
-            <h3>Teriyaki Chicken Tenders</h3>
-            <p>
-                Soy to the world! The time for a simple chicken stir-fry recipe has come. These tenders are tossed in a
-                thick teriyaki glaze, which coats each piece in a flavorful blend of soy sauce, garlic, ginger, and
-                sesame. Served atop a bed of jasmine rice with green beans to the side, they bring a tour-de-force of
-                Asian-style flavors that both kids and adults will find easy to love.<br>
-                
-                Cooking Time: 35 minutes | Cooking Difficulty: Easy<br>
-
-                Allergens:Soy, Wheat<br>
-                Produced in a facility that processes milk, eggs, fish, shellfish, tree nuts, peanuts, wheat, and
-                soybean.
-            </p>
-        </div>
-        <div class="col-md-5">
-            <img src="https://img.hellofresh.com/c_fit,f_auto,fl_lossy,h_1100,q_auto,w_2600/hellofresh_s3/image/5a664231ad1d6c6f007d0d72-0c9bca71.jpg" alt="">
         </div>
     </div>
 {% endblock %}
