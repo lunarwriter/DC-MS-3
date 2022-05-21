@@ -5,21 +5,58 @@
 
     {% for recipe in recipes %}
 
-        <div class="container px-4 px-lg-5">
-            <div class="row featurette">
-                <div class="col-md-7">
-                    <h3><a href="/recipes/{{ recipe.url }}">{{ recipe.name }}</a></h3>
-                    <p>{{ recipe.description }}</p>
-                </div>
-                <div class="col-md-5">
-                    <img src="{{ recipe.img_source }}" alt="Image for {{ recipe.name }}" class="featurette-image image-responsive">
+        <section class="page-section">
+            <div class="container">
+                <div class="product-item">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex ms-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-upper"><a href="/recipes/{{ recipe.url }}">{{ recipe.name }}</a></span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{ recipe.img_source }}" alt="Image for {{ recipe.name }}" />
+                    <div class="product-item-description d-flex me-auto">
+                        <div class="bg-faded p-5 rounded"><p class="mb-0">{{ recipe.description }}</p></div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <hr class="featurette-divider">
+        </section>
+        <section class="page-section">
+            <div class="container">
+                <div class="product-item">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex me-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-upper"><a href="/recipes/{{ recipe.url }}">{{ recipe.name }}</a></span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{ recipe.img_source }}" alt="Image for {{ recipe.name }}" />
+                    <div class="product-item-description d-flex ms-auto">
+                        <div class="bg-faded p-5 rounded"><p class="mb-0">{{ recipe.description }}</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section">
+            <div class="container">
+                <div class="product-item">
+                    <div class="product-item-title d-flex">
+                        <div class="bg-faded p-5 d-flex ms-auto rounded">
+                            <h2 class="section-heading mb-0">
+                                <span class="section-heading-upper"><a href="/recipes/{{ recipe.url }}">{{ recipe.name }}</a></span>
+                            </h2>
+                        </div>
+                    </div>
+                    <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="{{ recipe.img_source }}" alt="Image for {{ recipe.name }}" />
+                    <div class="product-item-description d-flex me-auto">
+                        <div class="bg-faded p-5 rounded"><p class="mb-0">{{ recipe.description }}</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     {% endfor %}
-
 
 {% endblock %}
