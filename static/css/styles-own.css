@@ -1,3 +1,7 @@
 .col-md-5 img {
     width: 100%;
 }
+
+.page-title {
+    color: rgba(249, 146, 55, 0.9);
+}
